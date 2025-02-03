@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩვენი საიტი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* ნაცრისფერი ფონი */
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            font-family: 'Times New Roman';
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        /* Navigation Buttons */
+        .nav-btns {
+            margin: 20px;
+        }
+
+        .nav-btns button {
+            background-color: #0538c5;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .nav-btns button:hover {
+            background-color: #555;
+        }
+
+        /* Main content area */
+        .content {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        /* Page styles */
+        .page {
+            display: none;
+        }
+
+        .page.show {
+            display: block;
+        }
+
+        /* Background image for songs page */
+        #songsPage {
+            background-image: url('Untitled design.png'); /* ფონად სურათი */
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            color: white;
+        }
+
+        /* Back Button */
+        .back-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main page content -->
+    <header>
+        <h1>FALL IN LOVE WITH YOU</h1>
+        <h2 style="color: rgb(196, 13, 13);">Fall in love with me again?</h2>
+    </header>
+
+    <div class="nav-btns">
+        <button onclick="showPage('history')">ჩვენი ისტორია</button>
+        <button onclick="showPage('songs')">სიმღერები</button>
+        <button onclick="showPage('word')">ჩემი სიტყვა</button>
+    </div>
+
+    <div id="mainPage" class="content">
+        <p><strong>მოგესალმებით მთავარ გვერდზე! სასურველი გვერდის ნახვისთვის დააჭირეთ ზევით მითითებულ შესაბამის ღილაკს.</strong></p>
+        <img src="475148873_1514247539217880_2670882128879572529_n.jpg" alt="მთავარი გვერდი" style="max-width: 100%; height: auto; margin-top: 20px;">
+    </div>
+
+    <!-- History page -->
+    <div id="historyPage" class="page">
+        <h2>ჩვენი ისტორია</h2>
+        <h3> და მაინც ესე უნდა დასრულდეს ეს ყველაფერი?</h3>
+        <p> 
+            არასდროს მეგონა თუ ის ოცნება ამიხდებოდა შენზე, მაგრამ ერთ დღეს 2024 წლის 20 მაისს ეგ ყველაფერი მოხდა. მანამდეც ძალიან მინდოდა შენი გაცნობა, იმ დღიდანვე პირველად რომ დაგინახე ზურგით. 
+            მომეწონე ისე ძალიან რომ მაინც არასდროს მავიწყდებოდი, სადაც და რამდენჯერაც შემხვედრიხარ ყოველთვის გულის აჩქარებამდე მიგყავდი. ამდენი დამთხვევაც ხო რაღაცის გამო მოხდა მაგრამ, 
+            როგორ არ მინდა იმ ისტორიას რაც დაიწყო, 
+            ესეთი დასასრული ჰქონდეს. რომ გაგიცანი შემიყვარდი, ისე ძალიან რომ ახლა ვიცი მთელი ცხოვრება ვერ დაგივიწყებ. 💗</p>
+        <button class="back-btn" onclick="backToMain()">მთავარი გვერდი</button>
+    </div>
+
+    <!-- Songs page with background image -->
+    <div id="songsPage" class="page">
+        <h2>სიმღერები</h2>
+        <p>ყველა ის სიმღერა რომელზეც შენ და მარტო შენ მახსენდები 💕🎶</p>
+        <ul>
+            <li>
+                <audio controls>
+                    <source src="New West - Those Eyes.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Those Eyes. აი პირველიც და მთავარი.</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="NAGDI.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Mind over matter. ერთხელ ჩამიგდე და შენ რას იზავ? 😄</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="VIDEOCLUB - Amour plastique (Lyrics  Paroles).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Amour plastique. ახალი გაცნობილი მყავდი 24 მაისს და note–ში გედო 🙃</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="Prince - Call My Name (Official Music Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Call My Name. ბევრჯერ მაქვს ეს რომ ამ სიმღერას ხშირად ვუსმენ, იმიტომ რომ ამაზეც შენ მახსენდები 💗</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="Lord Huron - The Night We Met (Official Lyric Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>The Night We Met. ძალიან მინდა ის ღამე დაბრუნდეს (26.05,2024)😶</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="Bruno Mars - Marry You (Official Lyric Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Marry You. მე კი მაგრამ ნეტა შენ თუ გახსოვს რატომ არის ეს სიმღერა ამ სიაში? 😂</p>
+            </li>
+            <li>
+                <audio controls>
+                    <source src="The Police - Every Breath You Take (Official Music Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Every Breath You Take. რამდენჯერაც ვუსმენ ვრწმუნდები რომ სულ მეყვარები.😍</p>
+            </li>
+        </ul>
+        <button class="back-btn" onclick="backToMain()">მთავარი გვერდი</button>
+    </div>
+
+    <!-- My Word page -->
+    <div id="wordPage" class="page">
+        <h2>ჩემი სიტყვა</h2>
+        <h3> მეც მაქვს სათქმელი😉</h3>
+        <p> სიტყვაში თუ ერთი სიტყვა იგულისხმება წერილობით 988 ჯერ მაქვს ნათქვამი რომ მე შენ მიყვარხარ! რამდენჯერაც არ უნდა დამჭირდეს იმდენჯერ გიპოვი. 
+            ვერ გაგიშვებ მე ვერასდროს ვერც ჩემი გულიდან და ვერც ჩემი გონებიდან! იცოდე რომ სადაც არ უნდა ვიყო და როგორც არ უნდა ვიყო ყოველთვის მეყვარები. მადლობა ნინი💕
+        </p> <!-- თქვენი ტექსტი აქ -->
+        <button class="back-btn" onclick="backToMain()">მთავარი გვერდი</button>
+    </div>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(page) {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('historyPage').style.display = 'none';
+            document.getElementById('songsPage').style.display = 'none';
+            document.getElementById('wordPage').style.display = 'none'; // added wordPage part
+
+            document.getElementById(page + 'Page').style.display = 'block';
+        }
+
+        // Function to return to the main page
+        function backToMain() {
+            document.getElementById('mainPage').style.display = 'block';
+            document.getElementById('historyPage').style.display = 'none';
+            document.getElementById('songsPage').style.display = 'none';
+            document.getElementById('wordPage').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
